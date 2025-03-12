@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fheaton- <fheaton-@students.42.fr>         +#+  +:+       +#+        */
+/*   By: fiheaton <fiheaton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/24 14:40:47 by fheaton-          #+#    #+#             */
-/*   Updated: 2021/07/24 15:37:33 by fheaton-         ###   ########.fr       */
+/*   Created: 2024/04/18 13:53:15 by fiheaton          #+#    #+#             */
+/*   Updated: 2024/04/18 19:02:09 by fiheaton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "ft_printf.h"
+#include "libft.h"
 
-int	main()
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	ft_printf(" %p %p \n", NULL, NULL);
-	printf(" %p %p \n", NULL, NULL);
-	return (0);
+	unsigned int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }

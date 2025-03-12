@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fheaton- <fheaton-@students.42.fr>         +#+  +:+       +#+        */
+/*   By: fiheaton <fiheaton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 21:54:08 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/19 18:14:36 by fheaton-         ###   ########.fr       */
+/*   Updated: 2024/05/14 13:55:57 by fiheaton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <limits.h>
 # include <stdio.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -44,6 +44,7 @@ void			*ft_memmove(void *str1, const void *str2, size_t n);
 void			*ft_memset(void *str, int c, size_t n);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strdup(const char *s1);
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 size_t			ft_strlcat(char *dest, const char *src, size_t size);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlen(const char *str);

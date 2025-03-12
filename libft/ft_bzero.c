@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fheaton- <fheaton-@students.42.fr>         +#+  +:+       +#+        */
+/*   By: fiheaton <fiheaton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 15:19:05 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/11 15:56:44 by fheaton-         ###   ########.fr       */
+/*   Updated: 2024/05/14 13:20:29 by fiheaton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_bzero(void *s, size_t n)
 	char	*ptr;
 	int		a;
 
-	ptr = (char*)s;
+	ptr = (char *)s;
 	a = -1;
 	while ((size_t)++a < n)
 		ptr[a] = 0;

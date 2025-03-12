@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fheaton- <fheaton-@students.42.fr>         +#+  +:+       +#+        */
+/*   By: fiheaton <fiheaton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 10:31:46 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/25 19:22:08 by fheaton-         ###   ########.fr       */
+/*   Updated: 2024/05/14 13:26:17 by fiheaton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,8 @@ static char	**ft_affect(char const *s, char **dst, char c, int l)
 		k = 0;
 		while (s[i] == c)
 			i++;
-		if (!(dst[j] = malloc((ft_numchar(s, c, i) + 1) * sizeof(char))))
+		dst[j] = malloc((ft_numchar(s, c, i) + 1) * sizeof(char));
+		if (!dst[j])
 			return (NULL);
 		if (dst[j] == NULL)
 			return (ft_free((char const **)dst, j));
@@ -85,7 +86,7 @@ static char	**ft_affect(char const *s, char **dst, char c, int l)
 	return (dst);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**dst;
 	int		l;
@@ -93,7 +94,8 @@ char		**ft_split(char const *s, char c)
 	if (s == NULL)
 		return (NULL);
 	l = ft_numstring(s, c);
-	if (!(dst = malloc((l + 1) * sizeof(char *))))
+	dst = malloc((l + 1) * sizeof(char *));
+	if (!dst)
 		return (NULL);
 	if (dst == NULL)
 		return (NULL);

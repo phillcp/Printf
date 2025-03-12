@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fheaton- <fheaton-@students.42.fr>         +#+  +:+       +#+        */
+/*   By: fiheaton <fiheaton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 02:26:39 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/16 16:02:55 by fheaton-         ###   ########.fr       */
+/*   Updated: 2024/05/14 13:26:40 by fiheaton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char	*ft_strchr(const char *s, int c)
 		a++;
 	}
 	if (c == '\0')
-		return((char *)s + a);
+		return ((char *)s + a);
 	return (NULL);
 }

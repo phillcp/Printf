@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fheaton- <fheaton-@students.42.fr>         +#+  +:+       +#+        */
+/*   By: fiheaton <fiheaton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 00:04:42 by marvin            #+#    #+#             */
-/*   Updated: 2021/02/11 17:24:34 by fheaton-         ###   ########.fr       */
+/*   Updated: 2024/05/14 13:53:10 by fiheaton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_islower(int c)
 	return (c >= 97 && c <= 122);
 }
 
-int			ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (ft_islower(c))
 		c -= 32;

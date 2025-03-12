@@ -1,7 +1,6 @@
 INCDIR	= .
 
-SRCS	=	main.c \
-			ft_printf.c \
+SRCS	=	ft_printf.c \
 			parsing.c \
 			conversions/c_print.c \
 			conversions/s_print.c \
